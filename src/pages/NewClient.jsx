@@ -2,7 +2,9 @@ import React from 'react'
 
 const NewClient = () => {
   return (
-    <div>NewClient</div>
+    <div>
+      <h1>Nuevo Cliente</h1>
+    </div>
   )
 }
 

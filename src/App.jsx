@@ -12,13 +12,11 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-
           <Route path="/clients" element={<Layout />}>
             <Route index element={<Home />} />
             <Route path="new" element={<NewClient />} />
             <Route path="edit/:id" element={<EditClient />} />
           </Route>
-
         </Routes>
       </BrowserRouter>
     </div>
