@@ -2,6 +2,10 @@ import React from "react";
 import { Formik, Form, Field } from "formik";
 
 const FormnewClients = () => {
+  const handleSubmit = (values) => {
+    console.log(values);
+  };
+
   return (
     <div className="bg-white mt-10 px-5 py-10 rounded-md shadow-md md:w-3/4 mx-auto">
       <h1 className="text-gray-600 font-bold text-xl uppercase text-center">
@@ -16,6 +20,7 @@ const FormnewClients = () => {
           phone: "",
           notes: "",
         }}
+        onSubmit={(values) => handleSubmit(values)}
       >
         {() => (
           <Form className="mt-10">
