@@ -1,9 +1,12 @@
 import React from "react";
 import { Formik, Form, Field } from "formik";
+import { useNavigate } from "react-router-dom";
 import * as Yup from "yup";
 import Alert from "./Alert";
 
 const FormnewClients = () => {
+  const navigate = useNavigate();
+
   const newClientSchema = Yup.object().shape({
     name: Yup.string()
       .min(3, "El nombre es muy corto")
@@ -32,9 +35,10 @@ const FormnewClients = () => {
       });
 
       const result = await response.json();
-      console.log(response);
-
+      // console.log(response);
       console.log(result);
+
+      navigate("/clients");
     } catch (error) {
       console.log(error);
     }
@@ -54,7 +58,11 @@ const FormnewClients = () => {
           phone: "",
           notes: "",
         }}
-        onSubmit={(values) => handleSubmit(values)}
+        onSubmit={async (values, { resetForm }) => {
+          await handleSubmit(values);
+
+          resetForm();
+        }}
         validationSchema={newClientSchema}
       >
         {({ errors, touched }) => {
