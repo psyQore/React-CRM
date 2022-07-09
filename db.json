@@ -1,8 +1,16 @@
 {
-    "clients": [
-        {
-            "id": 1,
-            "name": "Juan"
-        }
-    ]
+  "clients": [
+    {
+      "id": 1,
+      "name": "Juan"
+    },
+    {
+      "name": "Juan",
+      "company": "Qore",
+      "email": "correo@correo.com",
+      "phone": "989080978",
+      "notes": "Cliente quiere una copia",
+      "id": 2
+    }
+  ]
 }

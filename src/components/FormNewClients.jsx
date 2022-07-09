@@ -19,8 +19,25 @@ const FormnewClients = () => {
       .typeError("El número no es válido"),
   });
 
-  const handleSubmit = (values) => {
-    console.log(values);
+  const handleSubmit = async (values) => {
+    try {
+      const url = "http://localhost:4000/clients";
+
+      const response = await fetch(url, {
+        method: "POST",
+        body: JSON.stringify(values),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+
+      const result = await response.json();
+      console.log(response);
+
+      console.log(result);
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (
