@@ -1,6 +1,8 @@
-import React from "react";
+import { useNavigate, Link } from "react-router-dom";
 
 const Client = ({ client }) => {
+  const navigate = useNavigate();
+
   const { name, company, phone, email, notes, id } = client;
 
   return (
@@ -22,6 +24,7 @@ const Client = ({ client }) => {
         <button
           className="bg-green-600 hover:bg-green-700 block w-full text-white p-2 uppercase font-bold text-xs"
           type="button"
+          onClick={() => navigate(`/clients/${id}`)}
         >
           Ver
         </button>
