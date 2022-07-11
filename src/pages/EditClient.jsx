@@ -22,7 +22,7 @@ const EditClient = () => {
       }
       setTimeout(() => {
         setLoading(false);
-      }, 2000);
+      }, 1000);
     };
     getClientAPI();
   }, []);
@@ -33,9 +33,9 @@ const EditClient = () => {
         Utiliza este formulario para editar datos de un cliente
       </p>
 
-      <FormClient client={client} loading={loading} />
+      {client.name ? <FormClient client={client} loading={loading} /> : <p>Cliente ID No Válido</p> }
     </>
-  )
-}
+  );
+};
 
-export default EditClient
+export default EditClient;
