@@ -1,5 +1,5 @@
 import React from "react";
-import FormNeClients from "../components/FormNewClients";
+import FormClient from "../components/FormClient";
 
 const NewClient = () => {
   return (
@@ -9,7 +9,7 @@ const NewClient = () => {
         Llena los siguientes camos para registrar un nuevo cliente
       </p>
 
-      <FormNeClients />
+      <FormClient />
     </>
   );
 };

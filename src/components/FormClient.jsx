@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import * as Yup from "yup";
 import Alert from "./Alert";
 
-const FormnewClients = () => {
+const FormClient = ({ client }) => {
   const navigate = useNavigate();
 
   const newClientSchema = Yup.object().shape({
@@ -161,4 +161,4 @@ const FormnewClients = () => {
   );
 };
 
-export default FormnewClients;
+export default FormClient;
