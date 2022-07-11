@@ -151,7 +151,7 @@ const FormnewClients = () => {
               <input
                 type="submit"
                 value="Agregar Cliente"
-                className="mt-5 w-full bg-blue-800 p-3 text-white rounded-md font-bold uppercase text-lg hover:cursor-pointer"
+                className="mt-5 w-full bg-purple-800 p-3 text-white rounded-md font-bold uppercase text-lg hover:cursor-pointer"
               />
             </Form>
           );

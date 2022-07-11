@@ -22,14 +22,14 @@ const Client = ({ client }) => {
       <td className="p-3">{company}</td>
       <td className="p-3">
         <button
-          className="bg-green-600 hover:bg-green-700 block w-full text-white p-2 uppercase font-bold text-xs"
+          className="bg-blue-600 hover:bg-blue-700 block w-full text-white p-2 uppercase font-bold text-xs"
           type="button"
           onClick={() => navigate(`/clients/${id}`)}
         >
           Ver
         </button>
         <button
-          className="bg-blue-600 hover:bg-blue-700 block w-full text-white p-2 uppercase font-bold text-xs mt-3"
+          className="bg-purple-600 hover:bg-violet-700 block w-full text-white p-2 uppercase font-bold text-xs mt-3"
           type="button"
         >
           Editar

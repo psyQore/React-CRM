@@ -7,23 +7,23 @@ const Layout = () => {
 
   return (
     <div className="md:flex md:min-h-screen">
-      <div className="md:w-1/4 bg-blue-900 px-5 py-10">
+      <div className="md:w-1/4 bg-violet-900 px-5 py-10">
         <h2 className="text-4xl font-black text-center text-white">
-          CRM Cliuentes
+          CRM Clientes
         </h2>
         <nav className="mt-10">
           <Link
             className={`${
-              currentUrl === "/clients" ? "text-blue-300" : "text-white"
-            } text-2xl block mt-2 hover:text-blue-300`}
+              currentUrl === "/clients" ? "text-violet-300" : "text-white"
+            } text-2xl block mt-2 hover:text-purple-300`}
             to="/clients"
           >
             Clientes
           </Link>
           <Link
             className={`${
-              currentUrl === "/clients/new" ? "text-blue-300" : "text-white"
-            } text-2xl block mt-2 hover:text-blue-300`}
+              currentUrl === "/clients/new" ? "text-violet-300" : "text-white"
+            } text-2xl block mt-2 hover:text-purple-300`}
             to="/clients/new"
           >
             Nuevo Cliente
