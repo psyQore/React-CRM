@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import Spinner from '../components/Spinner';
 
 const ViewCLient = () => {
   const { id } = useParams();
@@ -18,7 +19,9 @@ const ViewCLient = () => {
       } catch (error) {
         console.log(error);
       }
-      setLoading(false);
+      setTimeout(() => {
+        setLoading(false);
+      }, 2000);
     };
     getClientAPI();
   }, []);
@@ -26,11 +29,15 @@ const ViewCLient = () => {
   return (
     <>
       {loading ? (
-        "Cargando.."
+        <Spinner/>
+      ) : Object.keys(client).length === 0 ? (
+        <p>No hay Resultados</p>
       ) : (
         <section>
+          <h1 className="font-black text-4xl text-violet-900">Ver Cliente: {client.name}</h1>
+          <p className="mt-3">Información del Cliente</p>
           <section className="text-gray-600 body-font">
-            <div className="container px-5 py-24 mx-auto">
+            <div className="container px-5 py-10 mx-auto">
               <div className="p-5 bg-white flex items-center mx-auto border-b  mb-10 border-gray-200 rounded-lg sm:flex-row flex-col">
                 <div className="sm:w-32 sm:h-32 h-20 w-20 sm:mr-10 inline-flex items-center justify-center flex-shrink-0">
                   <img src="https://cdn-icons-png.flaticon.com/512/6009/6009864.png" />
