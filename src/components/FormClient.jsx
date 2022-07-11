@@ -52,12 +52,13 @@ const FormClient = ({ client }) => {
 
       <Formik
         initialValues={{
-          name: "",
-          company: "",
-          email: "",
-          phone: "",
-          notes: "",
+          name: client?.name ?? "",
+          company: client?.company ?? "",
+          email: client?.email ?? "",
+          phone: client?.phone ?? "",
+          notes: client?.notes ?? "",
         }}
+        enableReinitialize={true}
         onSubmit={async (values, { resetForm }) => {
           await handleSubmit(values);
 
@@ -159,6 +160,10 @@ const FormClient = ({ client }) => {
       </Formik>
     </div>
   );
+};
+
+FormClient.defaultProps = {
+  client: {},
 };
 
 export default FormClient;
