@@ -1,7 +1,7 @@
 {
   "clients": [
     {
-      "name": "Juan",
+      "name": "Juan Actualizado",
       "company": "Qore",
       "email": "correo@correo.com",
       "phone": "989080978",
@@ -47,6 +47,14 @@
       "phone": "989080978",
       "notes": "Cliente quiere una copia",
       "id": 6
+    },
+    {
+      "name": "Edgard",
+      "company": "Qore Code",
+      "email": "correo@corre.cl",
+      "phone": "23423423",
+      "notes": "Nuevo Cliente",
+      "id": 7
     }
   ]
 }

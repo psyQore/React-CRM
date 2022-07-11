@@ -33,7 +33,11 @@ const EditClient = () => {
         Utiliza este formulario para editar datos de un cliente
       </p>
 
-      {client.name ? <FormClient client={client} loading={loading} /> : <p>Cliente ID No Válido</p> }
+      {client.name ? (
+        <FormClient client={client} loading={loading} />
+      ) : (
+        <p>Cliente ID No Válido</p>
+      )}
     </>
   );
 };
