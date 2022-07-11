@@ -33,7 +33,7 @@ const EditClient = () => {
         Utiliza este formulario para editar datos de un cliente
       </p>
 
-      <FormClient client={client} />
+      <FormClient client={client} loading={loading} />
     </>
   )
 }

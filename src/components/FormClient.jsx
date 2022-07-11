@@ -3,8 +3,9 @@ import { Formik, Form, Field } from "formik";
 import { useNavigate } from "react-router-dom";
 import * as Yup from "yup";
 import Alert from "./Alert";
+import Spinner from "../components/Spinner";
 
-const FormClient = ({ client }) => {
+const FormClient = ({ client, loading }) => {
   const navigate = useNavigate();
 
   const newClientSchema = Yup.object().shape({
@@ -44,7 +45,9 @@ const FormClient = ({ client }) => {
     }
   };
 
-  return (
+  return loading ? (
+    <Spinner />
+  ) : (
     <div className="bg-white mt-10 px-5 py-10 rounded-md shadow-md md:w-3/4 mx-auto">
       <h1 className="text-gray-600 font-bold text-xl uppercase text-center">
         {client?.name ? "Editar Cliente" : "Agregar cliente"}
@@ -164,6 +167,7 @@ const FormClient = ({ client }) => {
 
 FormClient.defaultProps = {
   client: {},
+  loading: false,
 };
 
 export default FormClient;
