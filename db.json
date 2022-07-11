@@ -25,22 +25,6 @@
       "id": 3
     },
     {
-      "name": "Paolo",
-      "company": "chuco company",
-      "email": "correo@correo.com",
-      "phone": "43345453",
-      "notes": "Cliente juega nintendo xd",
-      "id": 4
-    },
-    {
-      "name": "Juan Galarce",
-      "company": "Qore",
-      "email": "correo@correo.com",
-      "phone": "989080978",
-      "notes": "Cliente quiere una copia",
-      "id": 5
-    },
-    {
       "name": "Francisco",
       "company": "Qore",
       "email": "correo@correo.com",

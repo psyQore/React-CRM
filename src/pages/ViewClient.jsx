@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import Spinner from '../components/Spinner';
+import Spinner from "../components/Spinner";
 
 const ViewCLient = () => {
   const { id } = useParams();
@@ -29,12 +29,14 @@ const ViewCLient = () => {
   return (
     <>
       {loading ? (
-        <Spinner/>
+        <Spinner />
       ) : Object.keys(client).length === 0 ? (
         <p>No hay Resultados</p>
       ) : (
         <section>
-          <h1 className="font-black text-4xl text-violet-900">Ver Cliente: {client.name}</h1>
+          <h1 className="font-black text-4xl text-violet-900">
+            Ver Cliente: {client.name}
+          </h1>
           <p className="mt-3">Información del Cliente</p>
           <section className="text-gray-600 body-font">
             <div className="container px-5 py-10 mx-auto">
